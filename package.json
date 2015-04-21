@@ -1,5 +1,5 @@
 {
-  "name": "angular-server",
+  "name": "simple-angular-server",
   "version": "0.1.1",
   "bin": {"angularserver": "app.js"},
   "engines": {"node": "*"},
