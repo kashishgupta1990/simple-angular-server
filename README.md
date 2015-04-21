@@ -8,7 +8,7 @@ It is use to serve angular `public` or `dist` director with `HTML5Mode`=`true` i
 ### Usage 
 Just run this command into angular project directory and make sure `node` is install before.
 ```sh
-npm install angular-server
+npm i simple-angular-server
 ```
  
 ### Example
@@ -25,4 +25,14 @@ Syntax: node app.js [PORT] [Directory Path]
 
 ```sh
 $ node app.js 8080 /dist
+```
+### Download Link:
+#### GIT
+```sh
+git@github.com:kashishgupta1990/simple-angular-server.git
+```
+
+#### NPM
+```sh
+npm i simple-angular-server
 ```
