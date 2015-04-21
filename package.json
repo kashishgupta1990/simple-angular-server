@@ -1,6 +1,6 @@
 {
   "name": "simple-angular-server",
-  "version": "0.1.2",
+  "version": "0.2.2",
   "bin": {"angularserver": "app.js"},
   "engines": {"node": "*"},
   "description": "Simple angular server to serve angular page's with HTML5 mode on",
