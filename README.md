@@ -7,12 +7,12 @@ It is use to serve angular `public` or `dist` director with `HTML5Mode`=`true` i
 
 ### Usage 
 Just run this command into angular project directory and make sure `node` is install before.
- ```sh
- npm install angular-server
- ```
+```sh
+npm install angular-server
+```
  
- ### Example 
- #####  Directory Structure (Serve `dist` folder)
+### Example
+#####  Directory Structure (Serve `dist` folder)
   - dist
   - src
   - ---- app
