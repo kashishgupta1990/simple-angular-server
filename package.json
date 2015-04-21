@@ -1,0 +1,12 @@
+{
+  "name": "angular-server",
+  "version": "0.1.0",
+  "bin": {"angularserver": "app.js"},
+  "engines": {"node": "*"},
+  "description": "Simple angular server to serve angular page's with HTML5 mode on",
+  "dependencies": {
+    "express": "~4.0.0",
+    "path": "^0.11.14",
+    "serve-favicon": "~2.0.1"
+  }
+}
