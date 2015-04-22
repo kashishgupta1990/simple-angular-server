@@ -1,10 +1,28 @@
 {
   "name": "simple-angular-server",
-  "version": "0.3.0",
+  "version": "0.3.5",
   "bin": {"angularserver": "app.js"},
   "description": "Simple angular server to serve angular page's with HTML5 mode on",
   "dependencies": {
-    "express": "~4.0.0",
-    "serve-favicon": "~2.0.1"
-  }
+    "express": "~4.0.0"
+  },
+  "keywords": [
+    "angularserver",
+    "angular server",
+    "server",
+    "node angular",
+    "html5 mode",
+    "simple angular node"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kashishgupta1990/simple-angular-server.git"
+  },
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "Kashish Gupta",
+      "email": "kashishgupta1990@yahoo.com"
+    }
+  ]
 }
