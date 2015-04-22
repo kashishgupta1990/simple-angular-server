@@ -4,19 +4,17 @@
 var PORT = 3000;
 
 // Change directory "public" here
-var FolderName = '/' + 'dist';
+var completePath = './';
 
 /*Command line arguments
  * Command node app.js [PORT] [PUBLIC-DIR-PATH]*/
 if (process.argv.length > 1) {
     PORT = (process.argv[2] && !isNaN(process.argv[2]) && +process.argv[2] ) || PORT;
-    FolderName = process.argv[3] || FolderName;
+    completePath = process.argv[3] || completePath;
 }
 
 var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var completePath = path.join(__dirname, FolderName);
+
 // Setup server
 var app = express();
 var server = require('http').createServer(app);
@@ -40,6 +38,6 @@ app.route('/*')
 
 // Start server
 server.listen(PORT, function () {
-    console.log('Angular Front-End server listening on PORT: %d ', PORT);
-    console.log('Server Public Directory Path: %s ', completePath);
+    console.log('Angular Server PORT: %d ', PORT);
+    console.log('Server Public Directory Path: %s ', app.get('appPath'));
 });

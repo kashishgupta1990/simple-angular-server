@@ -1,18 +1,24 @@
 # Angular Server
 
-It is use to serve angular `public` or `dist` director with `HTML5Mode`=`true` it means no more URL problems like showing 404 Error.
+It is use to serve angular `public` or `dist` director with `HTML5Mode`=`true`
+It means no more URL problems like showing 404 Error when we directly open `ui-route` or `ng-route` defined state.
 
 ### Dependence 
-  - node or iojs
+  - `node` or `iojs`
+  - `Linux` operating system
 
-### Usage 
+### Installation Guide
 Just run this command into angular project directory and make sure `node` is install before.
 ```sh
-npm i simple-angular-server
+npm i simple-angular-server -g
 ```
- 
+After installing this globaly. Now this can be accessable by LINUX command `angularserver`
+
 ### Example
 #####  Directory Structure (Serve `dist` folder)
+> Here `dist` must contain `index.html` file where we have `ng-app=ourAppName` defined.
+> Lets suppose complete angular application `path` would be `/home/user/myAngularApp/dist` 
+
   - dist
   - src
   - ---- app
@@ -20,11 +26,16 @@ npm i simple-angular-server
   - app.js
   
 ```sh
-Syntax: node app.js [PORT] [Directory Path]
+Syntax: angularserver [PORT] [Complete Directory Path]
 ```
-
+> Default [`PORT`:`3000`] and [`Directory Path`:`Your Current Directory`]
+> Our command would be like..
 ```sh
-$ node app.js 8080 /dist
+$ angularserver 8080 /home/user/myAngularApp/dist
+```
+> If we are in project directory 
+```sh
+$ angularserver 8080 ./dist
 ```
 ### Download Link:
 #### GIT
@@ -34,5 +45,8 @@ git@github.com:kashishgupta1990/simple-angular-server.git
 
 #### NPM
 ```sh
-npm i simple-angular-server
+npm i simple-angular-server -g
 ```
+
+#### Issue Tracking
+It's open community, so all are welcome to contribute or open `issue` || `suggestion` || `comments`
