@@ -5,6 +5,7 @@ var PORT = 3000;
 
 // Change directory "public" here
 var completePath = './';
+var filterPath;
 
 /*Command line arguments
  * Command node app.js [PORT] [PUBLIC-DIR-PATH]*/
@@ -14,6 +15,12 @@ if (process.argv.length > 1) {
 }
 
 var express = require('express');
+var currentDir = process.cwd();
+
+if (completePath.match(/\.\//)) {
+    filterPath = completePath.replace(/\.\//i,"");
+    completePath = currentDir + '/' + filterPath;
+}
 
 // Setup server
 var app = express();
