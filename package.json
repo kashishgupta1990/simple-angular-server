@@ -1,10 +1,13 @@
 {
   "name": "simple-angular-server",
   "version": "0.3.8",
-  "bin": {"angularserver": "app.js"},
+  "bin": {
+    "angularserver": "app.js"
+  },
   "description": "Simple angular server to serve angular page's with HTML5 mode on",
   "dependencies": {
-    "express": "~4.0.0"
+    "express": "~4.0.0",
+    "optimist": "^0.6.1"
   },
   "keywords": [
     "angularserver",
@@ -21,8 +24,30 @@
   "license": "MIT",
   "maintainers": [
     {
-      "name": "Kashish Gupta",
+      "name": "kashishgupta1990",
       "email": "kashishgupta1990@yahoo.com"
     }
-  ]
+  ],
+  "gitHead": "c078532930c5e421f9cbca715fcab315df820bb0",
+  "bugs": {
+    "url": "https://github.com/kashishgupta1990/simple-angular-server/issues"
+  },
+  "homepage": "https://github.com/kashishgupta1990/simple-angular-server",
+  "_id": "simple-angular-server@0.3.8",
+  "scripts": {},
+  "_shasum": "b0fb093a5c9cfb932f2c0d0bb581550635c9c261",
+  "_from": "simple-angular-server@",
+  "_npmVersion": "2.7.4",
+  "_nodeVersion": "0.12.2",
+  "_npmUser": {
+    "name": "kashishgupta1990",
+    "email": "kashishgupta1990@yahoo.com"
+  },
+  "dist": {
+    "shasum": "b0fb093a5c9cfb932f2c0d0bb581550635c9c261",
+    "tarball": "http://registry.npmjs.org/simple-angular-server/-/simple-angular-server-0.3.8.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/simple-angular-server/-/simple-angular-server-0.3.8.tgz",
+  "readme": "ERROR: No README data found!"
 }
