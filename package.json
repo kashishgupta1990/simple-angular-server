@@ -1,6 +1,6 @@
 {
   "name": "simple-angular-server",
-  "version": "0.3.10",
+  "version": "0.3.11",
   "bin": {
     "angularserver": "app.js"
   },
@@ -28,7 +28,6 @@
       "email": "kashishgupta1990@yahoo.com"
     }
   ],
-  "gitHead": "c078532930c5e421f9cbca715fcab315df820bb0",
   "bugs": {
     "url": "https://github.com/kashishgupta1990/simple-angular-server/issues"
   },
@@ -42,12 +41,5 @@
   "_npmUser": {
     "name": "kashishgupta1990",
     "email": "kashishgupta1990@yahoo.com"
-  },
-  "dist": {
-    "shasum": "b0fb093a5c9cfb932f2c0d0bb581550635c9c261",
-    "tarball": "http://registry.npmjs.org/simple-angular-server/-/simple-angular-server-0.3.10.tgz"
-  },
-  "directories": {},
-  "_resolved": "https://registry.npmjs.org/simple-angular-server/-/simple-angular-server-0.3.10.tgz",
-  "readme": "ERROR: No README data found!"
+  }
 }
