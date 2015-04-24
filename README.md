@@ -26,16 +26,16 @@ After installing this globaly. Now this can be accessable by LINUX command `angu
   - app.js
   
 ```sh
-Syntax: angularserver [PORT] [Complete Directory Path]
+Syntax: angularserver  --port 8080 --dir {path:like: ./app or /home/user/myapp}
 ```
-> Default [`PORT`:`3000`] and [`Directory Path`:`Your Current Directory`]
+> Default [`port`:`3000`] and [`Directory Path`:`Your Current Directory`]
 > Our command would be like..
 ```sh
-$ angularserver 8080 /home/user/myAngularApp/dist
+$ angularserver --port 8080  --dir /home/user/myAngularApp/dist
 ```
 > If we are in project directory 
 ```sh
-$ angularserver 8080 ./dist
+$ angularserver --port 8080 --dir ./dist
 ```
 ### Download Link:
 #### GIT
