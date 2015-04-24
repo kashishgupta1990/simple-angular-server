@@ -30,10 +30,12 @@ Syntax: angularserver  --port 8080 --dir {path:like: ./app or /home/user/myapp}
 ```
 > Default [`port`:`3000`] and [`Directory Path`:`Your Current Directory`]
 > Our command would be like..
+
 ```sh
 $ angularserver --port 8080  --dir /home/user/myAngularApp/dist
 ```
 > If we are in project directory 
+
 ```sh
 $ angularserver --port 8080 --dir ./dist
 ```

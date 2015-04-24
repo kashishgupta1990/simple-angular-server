@@ -1,6 +1,6 @@
 {
   "name": "simple-angular-server",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "bin": {
     "angularserver": "app.js"
   },
@@ -45,9 +45,9 @@
   },
   "dist": {
     "shasum": "b0fb093a5c9cfb932f2c0d0bb581550635c9c261",
-    "tarball": "http://registry.npmjs.org/simple-angular-server/-/simple-angular-server-0.3.8.tgz"
+    "tarball": "http://registry.npmjs.org/simple-angular-server/-/simple-angular-server-0.3.9.tgz"
   },
   "directories": {},
-  "_resolved": "https://registry.npmjs.org/simple-angular-server/-/simple-angular-server-0.3.8.tgz",
+  "_resolved": "https://registry.npmjs.org/simple-angular-server/-/simple-angular-server-0.3.9.tgz",
   "readme": "ERROR: No README data found!"
 }
