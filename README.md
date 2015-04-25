@@ -15,27 +15,49 @@ npm i simple-angular-server -g
 After installing this globaly. Now this can be accessable by LINUX command `angularserver`
 
 ### Example
+#### Define port ####
+> You can define which port angular server can use
+```sh
+Syntax: angularserver  --port 8080
+```
+By default port is [`port`:`3000`] 
+#### Define app directory folder ####
+> You can also define which directory of your app
+```sh
+Syntax: angularserver  --dir {path:like: ./dist or /home/user/myAngularApp/dist}
+```
+By default dir is [`Directory Path`:`Your Current Directory`]
+#### Define custom app home route ####
+> Now you can also define your home route by defining a route module
+Refer to below given example:
+```js
+//homeRoute.js
+module.exports = function (req, res) {
+    res.sendfile(app.get('appPath') + '/index2.html');
+}
+```
+```sh
+Syntax: angularserver  --route ./app/homeRoute.js
+```
+By default route  is 
+[
+function (req, res) {
+        res.sendfile(app.get('appPath') + '/index.html');
+}
+]
+
 #####  Directory Structure (Serve `dist` folder)
-> Here `dist` must contain `index.html` file where we have `ng-app=ourAppName` defined.
+> Here `dist` must contain `index.html` file where we have `ng-app=ourAppName` defined incase if you have not define custom home route.
 > Lets suppose complete angular application `path` would be `/home/user/myAngularApp/dist` 
 
-  - dist
-  - src
-  - ---- app
-  - ---- assets
-  - app.js
+  - app
+  - ---- app.js
+  - ---- index2.html
+  - homeRoute.js
   
-```sh
-Syntax: angularserver  --port 8080 --dir {path:like: ./app or /home/user/myapp}
-```
-> Default [`port`:`3000`] and [`Directory Path`:`Your Current Directory`]
 > Our command would be like..
 ```sh
-$ angularserver --port 8080  --dir /home/user/myAngularApp/dist
-```
-> If we are in project directory 
-```sh
-$ angularserver --port 8080 --dir ./dist
+$ angularserver --port 8080 --dir app --route ./app/homeRoute.js
 ```
 ### Download Link:
 #### GIT

@@ -9,21 +9,43 @@ var currentDir = process.cwd();
 var path = require('path');
 // Setup server
 var app = express();
+function _define(name, value) {
+    Object.defineProperty(global, name, {
+        value: value,
+        enumerable: true,
+        writable: false,
+        configurable: false
+    });
+}
 var server = require('http').createServer(app);
-
-app.use(express.static(path.resolve(currentDir,argv.dir)));
-app.set('appPath', path.resolve(currentDir,argv.dir));
-
+_define('app', app)
+app.use(express.static(path.resolve(currentDir, argv.dir)));
+app.set('appPath', path.resolve(currentDir, argv.dir));
 // All undefined asset or api routes should return a 404
 app.route('/:url(api|auth|components|app|bower_components|assets)/*')
     .get(function (req, res) {
         res.send("Error 404");
     });
 // All other routes should redirect to the index.html
-app.route('/*')
-    .get(function (req, res) {
+var appRoute;
+if (argv.route) {
+    try {
+        appRoute = require(path.resolve(currentDir, argv.route));
+        console.log("###################your route is#################");
+        console.log(appRoute.toString());
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+if (appRoute && (typeof appRoute == 'function')){
+  app.route('/*').get(appRoute);
+}
+else
+    app.route('/*').get(function (req, res) {
         res.sendfile(app.get('appPath') + '/index.html');
     });
+
 // Start server
 server.listen(argv.port, function () {
     console.log('Angular Server PORT: %d ', argv.port);
