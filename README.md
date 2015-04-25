@@ -57,7 +57,7 @@ function (req, res) {
   
 > Our command would be like..
 ```sh
-$ angularserver --port 8080 --dir app --route ./app/homeRoute.js
+$ angularserver --port 8080 --dir app --route ./homeRoute.js
 ```
 ### Download Link:
 #### GIT
