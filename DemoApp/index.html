@@ -1,4 +1,14 @@
-<h1>Hello Angular Application server</h1>
-<h4>Try commands</h4>
-<p><b>#$</b>  angularserver 8080 /home/user/myAngularApp/dist</p>
-<p><b>#$</b>  angularserver 8080 ./dist</p>
+<!doctype html>
+<html  ng-app="demoApp">
+<head>
+    <title>My Demo Application</title>
+    <script src="app/bower_components/angular/angular.min.js"></script>
+    <script src="app/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/home/home.js"></script>
+    <script src="app/aboutus/aboutus.js"></script>
+</head>
+<body>
+<div ui-view=""></div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 {
   "name": "simple-angular-server",
-  "version": "0.3.11",
+  "version": "0.3.12",
   "bin": {
     "angularserver": "app.js"
   },
@@ -32,7 +32,7 @@
     "url": "https://github.com/kashishgupta1990/simple-angular-server/issues"
   },
   "homepage": "https://github.com/kashishgupta1990/simple-angular-server",
-  "_id": "simple-angular-server@0.3.11",
+  "_id": "simple-angular-server@0.3.12",
   "scripts": {},
   "_shasum": "b0fb093a5c9cfb932f2c0d0bb581550635c9c261",
   "_from": "simple-angular-server@",

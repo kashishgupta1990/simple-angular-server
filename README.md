@@ -1,5 +1,4 @@
 # Angular Server
-
 It is use to serve angular `public` or `dist` director with `HTML5Mode`=`true`
 It means no more URL problems like showing 404 Error when we directly open `ui-route` or `ng-route` defined state.
 
@@ -15,30 +14,66 @@ npm i simple-angular-server -g
 After installing this globaly. Now this can be accessable by LINUX command `angularserver`
 
 ### Example
+
 #####  Directory Structure (Serve `dist` folder)
-> Here `dist` must contain `index.html` file where we have `ng-app=ourAppName` defined.
-> Lets suppose complete angular application `path` would be `/home/user/myAngularApp/dist` 
+> Lets suppose complete angular application `path` would be `/home/user/myAngularApp/dist`. Here `dist` is our public directory.
 
   - dist
-  - src
-  - ---- app
-  - ---- assets
-  - app.js
-  
-```sh
-Syntax: angularserver  --port 8080 --dir {path:like: ./app or /home/user/myapp}
-```
-> Default [`port`:`3000`] and [`Directory Path`:`Your Current Directory`]
-> Our command would be like..
+  - dist/`index.html`
+  - dist/assets/{*.*}
+  - dist/app/app.js  
+  - dist/app/{*.*}
+
+#### Define app directory folder ####
+> You can define angular app public directory.
 
 ```sh
-$ angularserver --port 8080  --dir /home/user/myAngularApp/dist
+Syntax-1 (Relative Path): angularserver  --dir [Directory Name]
+Syntax-2 (Absolute Path): angularserver  --dir [Complete Directory Path]
 ```
-> If we are in project directory 
+```sh
+$ angularserver  --dir ./dist
+```
+OR
+```sh
+$ angularserver  --dir home/user/myAngularApp/dist
+```
+By default dir is [`Directory Path`:`Your Current Directory`]
+
+#### Define `index.html` file path which contain `ng-app` defined ####
+> This file should be in root directory (like here `dist` is root directory) `dist->index.html` 
+> You can set your own main HTML file which contains `ng-app`.
+Lets suppose we have `main.html` is main file to serve:
+
+ - dist/`main.html`
+ 
+```sh
+Synatx: angularserve --file [Your File Name]
+```
+```sh
+$ angularserve --file main.html
+```
+By default file is [`file`:`index.html`]
+
+#### Define port ####
+> You can define angular server port
 
 ```sh
-$ angularserver --port 8080 --dir ./dist
+Syntax: angularserver  --port [Port Number]
 ```
+```sh
+$ angularserver  --port 8888
+```
+By default port is [`port`:`3000`] 
+
+
+#### Complete options #### 
+> Our command would be like
+
+```sh
+$ angularserver --port 8080 --dir dist --file main.html
+```
+
 ### Download Link:
 #### GIT
 ```sh
