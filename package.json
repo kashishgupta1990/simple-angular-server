@@ -6,6 +6,7 @@
   },
   "description": "Simple angular server to serve angular page's with HTML5 mode on",
   "dependencies": {
+    "cli-color": "^1.0.0",
     "express": "~4.0.0",
     "optimist": "^0.6.1"
   },
