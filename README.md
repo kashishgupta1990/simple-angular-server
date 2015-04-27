@@ -67,7 +67,7 @@ $ angularserver  --port 8888
 By default port is [`port`:`3000`] 
 
 
-#### Complete options #### 
+#### Complete options 
 > Our command would be like
 
 ```sh
